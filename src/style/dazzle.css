@@ -1,0 +1,24 @@
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1000;
+    background: radial-gradient(circle, transparent, transparent);
+    animation: none;
+  }
+  
+  @keyframes spiral-expand {
+    0% {
+      clip-path: circle(0% at var(--x) var(--y));
+      transform: rotate(0deg);
+      background: var(--complementary-color);
+    }
+    100% {
+      clip-path: circle(150% at var(--x) var(--y));
+      transform: rotate(720deg);
+      background: transparent;
+    }
+  }
